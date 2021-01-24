@@ -1,0 +1,58 @@
+1.1
+
+mohamed@fuxi-HP-EliteBook-820-G2:~$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                      PORTS               NAMES
+45db201cd4f7        nginx               "/docker-entrypoint.…"   About a minute ago   Exited (0) 27 seconds ago                       hopeful_matsumoto
+a18c0c5277f9        nginx               "/docker-entrypoint.…"   About a minute ago   Exited (0) 21 seconds ago                       trusting_banzai
+4b9853d4ca11        nginx               "/docker-entrypoint.…"   2 minutes ago        Up 2 minutes                80/tcp              fervent_buck
+mohamed@fuxi-HP-EliteBook-820-G2:~$
+
+1.2 
+
+mohamed@fuxi-HP-EliteBook-820-G2:~$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+mohamed@fuxi-HP-EliteBook-820-G2:~$ 
+
+mohamed@fuxi-HP-EliteBook-820-G2:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+mohamed@fuxi-HP-EliteBook-820-G2:~$ 
+
+
+1.3
+
+basics
+"This is the secret message"
+
+1.4
+
+docker run -d --name looper  devopsdockeruh/exec_bash_exercise
+docker exec -it looper bash
+tail -f ./logs.txt
+
+Secret message is:
+"Docker is easy"
+
+1.5
+
+docker run -it --name website ubuntu:18.04 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+sh: 1: curl: not found
+
+sudo apt-get update; apt-get install curl
+
+docker start website
+
+sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
