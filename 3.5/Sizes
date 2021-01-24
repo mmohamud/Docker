@@ -1,0 +1,22 @@
+Frontend before 
+
+myfirst      latest    6eb893fdac43   About a minute ago   445MB
+ubuntu       18.04     c090eaba6b94   29 hours ago         63.3MB
+
+Frontend after
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+myfirst      latest    77ab58711b5d   2 minutes ago   328MB
+node         alpine    179fbd4d8e5c   36 hours ago    109MB
+
+Backend before 
+
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+myfirst      latest    2e0c4053cc2e   9 seconds ago   251MB
+ubuntu       18.04     c090eaba6b94   29 hours ago    63.3MB
+
+
+
+backend after 
+myfirst      latest    52c4168d16c6   About a minute ago   129MB
+node         alpine    179fbd4d8e5c   36 hours ago         109MB
+

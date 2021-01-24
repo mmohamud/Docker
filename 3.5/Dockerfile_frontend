@@ -1,0 +1,6 @@
+FROM node:alpine
+WORKDIR /mydir
+EXPOSE 5000
+COPY ./frontend-example-docker .
+RUN npm install -y
+CMD [ "npm", "start" ]

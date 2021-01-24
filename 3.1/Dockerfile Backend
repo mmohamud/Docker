@@ -1,0 +1,14 @@
+FROM ubuntu:18.04
+WORKDIR /mydir
+EXPOSE 8000
+COPY ./backend-example-docker .
+RUN apt-get update && apt-get install -y \ 
+    curl python ca-certificates && \ 
+    curl -sL https://deb.nodesource.com/setup_10.x | bash && \
+    apt install -y nodejs -y && \
+    node -v && npm -v -y && \
+    npm install -y && \
+    apt-get purge -y --auto-remove curl && \
+    rm -rf /var/lib/apt/lists/* 
+
+CMD [ "npm", "start" ]
